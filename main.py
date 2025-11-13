@@ -1,9 +1,8 @@
 #### Fonction secondaire
- 
+
 
 def ispalindrome(p):
-    p = p.lower
-    traduction_table = str.maketrans({
+    table = str.maketrans({
     # Lettres minuscules
     'à': 'a', 'â': 'a', 'ä': 'a',
     'á': 'a', 'ã': 'a', 'å': 'a',
@@ -15,9 +14,8 @@ def ispalindrome(p):
     'ú': 'u', 'ù': 'u', 'û': 'u', 'ü': 'u',
     'ý': 'y', 'ÿ': 'y',
     })
-    word = p.translate(traduction_table)
-    print(word)
-    return False
+    p = str(p).lower().translate(table)
+    return p == p[::-1]
 
 #### Fonction principale
 
@@ -25,8 +23,7 @@ def ispalindrome(p):
 def main():
 
     # vos appels à la fonction secondaire ici
-
-    for s in ["radar", "kayak", "level", "rotor", "civique", "deifie", "épée"]:
+    for s in ["radar", "kayak", "level", "rotor", "civique", "deifie", "Épée"]:
         print(s, ispalindrome(s))
 
 
