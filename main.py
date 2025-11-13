@@ -1,10 +1,22 @@
 #### Fonction secondaire
-
+ 
 
 def ispalindrome(p):
-
-    # votre code ici
-    
+    p = p.lower
+    str.maketrans({
+    # Lettres minuscules
+    'à': 'a', 'â': 'a', 'ä': 'a',
+    'á': 'a', 'ã': 'a', 'å': 'a',
+    'ç': 'c',
+    'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+    'í': 'i', 'ì': 'i', 'î': 'i', 'ï': 'i',
+    'ñ': 'n',
+    'ó': 'o', 'ò': 'o', 'ô': 'o', 'ö': 'o', 'õ': 'o',
+    'ú': 'u', 'ù': 'u', 'û': 'u', 'ü': 'u',
+    'ý': 'y', 'ÿ': 'y',
+    })
+    p.translate
+    print(p)
     return False
 
 #### Fonction principale
@@ -14,7 +26,7 @@ def main():
 
     # vos appels à la fonction secondaire ici
 
-    for s in ["radar", "kayak", "level", "rotor", "civique", "deifie"]:
+    for s in ["radar", "kayak", "level", "rotor", "civique", "deifie", "épée"]:
         print(s, ispalindrome(s))
 
 
