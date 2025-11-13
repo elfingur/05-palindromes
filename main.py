@@ -3,7 +3,7 @@
 
 def ispalindrome(p):
     p = p.lower
-    str.maketrans({
+    traduction_table = str.maketrans({
     # Lettres minuscules
     'à': 'a', 'â': 'a', 'ä': 'a',
     'á': 'a', 'ã': 'a', 'å': 'a',
@@ -15,8 +15,8 @@ def ispalindrome(p):
     'ú': 'u', 'ù': 'u', 'û': 'u', 'ü': 'u',
     'ý': 'y', 'ÿ': 'y',
     })
-    p.translate
-    print(p)
+    word = p.translate(traduction_table)
+    print(word)
     return False
 
 #### Fonction principale
